@@ -8,15 +8,15 @@ class VendingMachine:
 
         # Items and their prices
         self.items = {
-            "Coke": {"price": 1.50, "image_path": "coke.png"},
-            "Pepsi": {"price": 1.50, "image_path": "pepsi.png"},
-            "Water": {"price": 1.00, "image_path": "water.png"},
-            "Chips": {"price": 1.25, "image_path": "chips.png"},
-            "Chocolate": {"price": 1.75, "image_path": "chocolate.png"},
-            "Candy": {"price": 1.00, "image_path": "candy.png"},
-            "Juice": {"price": 2.00, "image_path": "juice.png"},
-            "Gum": {"price": 0.75, "image_path": "gum.png"},
-            "Cookies": {"price": 2.50, "image_path": "cookies.png"}
+            "Coke": {"price": 42.00, "image_path": "./assets/coke.png"},
+            "Pepsi": {"price": 42.00, "image_path": "./assets/pepsi.png"},
+            "Water": {"price": 15.00, "image_path": "./assets/water.png"},
+            "Chips": {"price": 36.0, "image_path": "./assets/chips.png"},
+            "Chocolate": {"price": 30.00, "image_path": "./assets/chocolate.png"},
+            "Candy": {"price": 1.00, "image_path": "./assets/candy.png"},
+            "Juice": {"price": 20.00, "image_path": "./assets/juice.png"},
+            "Gum": {"price": 2.75, "image_path": "./assets/gum.png"},
+            "Cookies": {"price": 10.50, "image_path": "./assets/cookies.png"}
         }
 
         self.selected_item = tk.StringVar()
@@ -33,7 +33,7 @@ class VendingMachine:
         for i, (item, data) in enumerate(self.items.items()):
             row_num = i // 3 + 1
             col_num = i % 3
-            image = Image.open(data["image_path"]).resize((100, 100), Image.ANTIALIAS)
+            image = Image.open(data["image_path"]).resize((100, 100), Image.Resampling.LANCZOS)
             photo = ImageTk.PhotoImage(image)
             self.item_buttons[item] = tk.Button(master, text=f"P{data['price']:.2f}",
                                                  command=lambda item=item: self.select_item(item),
