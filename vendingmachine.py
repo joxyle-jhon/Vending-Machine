@@ -8,13 +8,13 @@ class VendingMachine:
 
         # Items and their prices
         self.items = {
-            "Coke": {"price": 42.00, "image_path": "./assets/coke.png"},
-            "Pepsi": {"price": 42.00, "image_path": "./assets/pepsi.png"},
+            "Coke": {"price": 35.00, "image_path": "./assets/coke.png"},
+            "Pepsi": {"price": 35.00, "image_path": "./assets/pepsi.png"},
             "Water": {"price": 15.00, "image_path": "./assets/water.png"},
             "Chips": {"price": 36.0, "image_path": "./assets/chips.png"},
-            "Chocolate": {"price": 30.00, "image_path": "./assets/chocolate.png"},
+            "Chocolate": {"price": 25.00, "image_path": "./assets/chocolate.png"},
             "Candy": {"price": 1.00, "image_path": "./assets/candy.png"},
-            "Juice": {"price": 20.00, "image_path": "./assets/juice.png"},
+            "Juice": {"price": 28.00, "image_path": "./assets/juice.png"},
             "Gum": {"price": 2.75, "image_path": "./assets/gum.png"},
             "Cookies": {"price": 10.50, "image_path": "./assets/cookies.png"}
         }
